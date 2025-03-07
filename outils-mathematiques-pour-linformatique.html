@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outils Mathématiques pour l'Informatique II - Hervé Talé Kalachi</title>
+  <meta name="description" content="Cours de Mathématiques pour l'Informatique, fournissant les fondements mathématiques essentiels pour aborder ultérieurement la cryptographie.">
+  <meta name="keywords" content="Mathématiques, Informatique, cryptographie, cours, Hervé Talé Kalachi">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Base styles */
+    body { 
+      font-family: 'Roboto', sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      line-height: 1.6; 
+      color: #333; 
+      background-color: #f9f9f9; 
+    }
+    header { 
+      background-image: url('images/crypto-background.png'); 
+      background-size: cover; 
+      background-position: center; 
+      color: #fff; 
+      padding: 40px 0; 
+      text-align: center; 
+      position: relative; 
+    }
+    .header-overlay { 
+      background-color: rgba(44, 62, 80, 0.8); 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+    }
+    .header-content { 
+      position: relative; 
+      z-index: 1; 
+    }
+    nav { 
+      background-color: #34495e; 
+      padding: 15px 0; 
+      text-align: center; 
+    }
+    nav a { 
+      color: #fff; 
+      text-decoration: none; 
+      margin: 0 20px; 
+      font-weight: bold; 
+      font-size: 1.1em; 
+    }
+    nav a:hover { 
+      color: #1abc9c; 
+    }
+    .container { 
+      max-width: 1200px; 
+      margin: 30px auto; 
+      padding: 20px; 
+      background-color: #fff; 
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    }
+    footer { 
+      text-align: center; 
+      padding: 20px 0; 
+      background-color: #2c3e50; 
+      color: #fff; 
+    }
+    footer a { 
+      color: #1abc9c; 
+      text-decoration: none; 
+    }
+    @media (max-width: 768px) { 
+      nav a { 
+        display: block; 
+        margin: 10px 0; 
+      } 
+    }
+    /* Styles spécifiques au cours */
+    .course-intro {
+      margin-bottom: 30px;
+      font-style: italic;
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-left: 4px solid #1abc9c;
+    }
+    .sessions-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .session-item {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+    }
+    .session-item a {
+      text-decoration: none;
+      color: #1abc9c;
+      font-weight: bold;
+    }
+    .session-item a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <h1>Hervé Talé Kalachi</h1>
+    </div>
+  </header>
+  
+    <!-- Navigation horizontale -->
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./publications.html">Publications</a>
+        <a href="./talks.html">Talks</a>
+        <a href="./teaching.html">Teaching</a>
+        <a href="./students.html">Students</a>
+        <a href="./news.html">News</a>
+    </nav>
+  
+  <div class="container">
+    <h2>Outils Mathématiques pour l'Informatique II (ANI 3016)</h2>
+    <!-- Note de présentation du cours -->
+    <section class="course-intro">
+      <p>
+        Ce cours desnité aux étudiants de niveau III des filières "Art & Intelligence Artificielle (AIA)" et "GAme Programming (GAP)" de l'ENSPY vise à fournir les fondements statistiques essentiels pour aborder ultérieurement les cours plus spécialisés en Intelligence Artificielle. À l'issue de ce cours, l'étudiant devra :
+      </p>
+      <ul>
+        <li>Comprendre les fondements théoriques des statistiques (probabilités, distributions, estimation, tests d'hypothèses).</li>
+        <li>Maîtriser l’analyse descriptive et les outils de visualisation des données.</li>
+        <li>Acquérir des compétences en modélisation statistique (régression, analyses multivariées) applicables en intelligence artificielle.</li>
+        <li>Relier les méthodes statistiques aux problématiques de l’IA, telles que l’optimisation de modèles, la réduction de dimension et l’inférence bayésienne.</li>
+      </ul>
+    </section>
+    
+    <!-- Liste des séances -->
+    <section>
+      <h2>Notes de cours des différentes séances</h2>
+      <ul class="sessions-list">
+        <li class="session-item">
+          <a href="./pdf/methode-mathematiques-informatiqueII/seance_1.pdf" target="_blank">
+            Séance 1 : Introduction et Contexte
+          </a>
+        </li>
+        <li class="session-item">
+          <a href="./pdf/methode-mathematiques-informatiqueII/seance_2.pdf" target="_blank">
+            Séance 2 : Statistiques Descriptives, Visualisation et Analyse Exploratoire de Données
+          </a>
+        </li>
+        <!-- Ajoutez d'autres séances au fur et à mesure -->
+      </ul>
+    </section>
+  </div>
+  
+  <footer>
+    <p>&copy; 2024 Hervé Talé Kalachi | 
+      <a href="https://scholar.google.fr/citations?user=2J45ZG0AAAAJ&hl=fr">Google Scholar</a> | 
+      <a href="https://orcid.org/0000-0002-2590-4159">ORCID</a> | 
+      <a href="https://www.linkedin.com/in/herve-tale-kalachi/">LinkedIn</a>
+    </p>
+  </footer>
+</body>
+</html>
+
