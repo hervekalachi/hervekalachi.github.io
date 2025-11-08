@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programmation en Python (MSP2) — Hervé Talé Kalachi</title>
+  <meta name="description" content="Cours MSP2 de Programmation en Python (Licence 2) — ENSPY, notes de cours par séance et fiches TP/TD."/>
+  <meta name="keywords" content="Python, MSP2, Licence 2, ENSPY, Programmation, Hervé Talé Kalachi"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    /* Base */
+    body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; background: #f9f9f9; }
+    header { background-image: url('images/crypto-background.jpg'); background-size: cover; background-position: center; color: #fff; padding: 40px 0; text-align: center; position: relative; }
+    .header-overlay { background: rgba(44,62,80,0.8); position: absolute; inset: 0; }
+    .header-content { position: relative; z-index: 1; }
+    nav { background: #34495e; padding: 15px 0; text-align: center; }
+    nav a { color: #fff; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 1.1em; }
+    nav a:hover { color: #1abc9c; }
+    .container { max-width: 1200px; margin: 30px auto; padding: 20px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    footer { text-align: center; padding: 20px 0; background: #2c3e50; color: #fff; }
+    footer a { color: #1abc9c; text-decoration: none; }
+    @media (max-width: 768px){ nav a { display:block; margin:10px 0; } }
+
+    /* Spécifique cours */
+    .course-intro { margin-bottom: 30px; font-style: italic; background: #f4f4f4; padding: 15px; border-left: 4px solid #1abc9c; }
+    .block { margin-top: 30px; }
+    .sessions-list, .tp-list { list-style: none; padding: 0; margin: 0; }
+    .item { margin-bottom: 14px; padding: 12px; border: 1px solid #e1e1e1; background: #fff; display: flex; align-items: center; gap: 10px; }
+    .item i { min-width: 22px; text-align: center; }
+    .item a { text-decoration: none; color: #1abc9c; font-weight: 700; }
+    .item a:hover { text-decoration: underline; }
+    .tag { display: inline-block; font-size: 12px; color: #555; background: #eef6f4; border: 1px solid #cfe9e3; padding: 2px 6px; border-radius: 4px; margin-left: 6px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <h1>Programmation en Python — MSP2 (Licence 2)</h1>
+    </div>
+  </header>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./publications.html">Publications</a>
+    <a href="./talks.html">Talks</a>
+    <a href="./teaching.html">Teaching</a>
+    <a href="./students.html">Students</a>
+    <a href="./news.html">News</a>
+  </nav>
+
+  <div class="container">
+    <section class="course-intro">
+      <p>
+        Cours destiné aux étudiants de MSP2 (Licence 2) de la filière Sciences et Technologie, ENSPY. 
+        Il couvre les bases pratiques de Python pour l’algorithmique et l’ingénierie logicielle : 
+        modes d’utilisation, structures de données, structures de contrôle, fonctions, 
+        gestion des fichiers, erreurs et exceptions. Les notes de cours par séance et les fiches de TP/TD sont ci-dessous.
+      </p>
+    </section>
+
+    <!-- Notes de cours -->
+    <section class="block">
+      <h2>Notes de cours par séance</h2>
+      <ul class="sessions-list">
+        <li class="item">
+          <i class="fa-solid fa-file-pdf"></i>
+          <a href="./pdf/python-msp2/Cours_programmation_en_python_S1.pdf" target="_blank">Séance 1 — Introduction</a>
+          <span class="tag">PDF</span>
+        </li>
+        <li class="item">
+          <i class="fa-solid fa-file-pdf"></i>
+          <a href="./pdf/python-msp2/Cours_programmation_en_python_S2.pdf" target="_blank">Séance 2 — Débuter avec Python</a>
+          <span class="tag">PDF</span>
+        </li>
+        <li class="item">
+          <i class="fa-solid fa-file-pdf"></i>
+          <a href="./pdf/python-msp2/Cours_programmation_en_python_S3.pdf" target="_blank">Séance 3 — Structures de contrôle</a>
+          <span class="tag">PDF</span>
+        </li>
+        <li class="item">
+          <i class="fa-solid fa-file-pdf"></i>
+          <a href="./pdf/python-msp2/Cours_programmation_en_python_S4.pdf" target="_blank">Séance 4 — Structures de données</a>
+          <span class="tag">PDF</span>
+        </li>
+        <li class="item">
+          <i class="fa-solid fa-file-pdf"></i>
+          <a href="./pdf/python-msp2/Cours_programmation_en_python_S5.pdf" target="_blank">Séance 5 — Création de fonctions</a>
+          <span class="tag">PDF</span>
+        </li>
+        <li class="item">
+          <i class="fa-solid fa-file-pdf"></i>
+          <a href="./pdf/python-msp2/Cours_programmation_en_python_S6.pdf" target="_blank">Séance 6 — Fichiers, erreurs et exceptions</a>
+          <span class="tag">PDF</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- TP/TD -->
+    <section class="block">
+      <h2>Fiches TP/TD</h2>
+      <ul class="tp-list">
+        <li class="item">
+          <i class="fa-solid fa-file-pdf"></i>
+          <a href="./pdf/python-msp2/FicheTP_TD-1.pdf" target="_blank">Fiche TP/TD 1 — Conditions, boucles, chaînes</a>
+          <span class="tag">PDF</span>
+        </li>
+        <li class="item">
+          <i class="fa-solid fa-file-pdf"></i>
+          <a href="./pdf/python-msp2/FicheTP_TD-2.pdf" target="_blank">Fiche TP/TD 2 — Structures de données & fonctions</a>
+          <span class="tag">PDF</span>
+        </li>
+        <li class="item">
+          <i class="fa-regular fa-clock"></i>
+          <span>Fiche TP/TD 3 — À venir</span>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Hervé Talé Kalachi |
+      <a href="https://scholar.google.fr/citations?user=2J45ZG0AAAAJ&hl=fr">Google Scholar</a> |
+      <a href="https://orcid.org/0000-0002-2590-4159">ORCID</a> |
+      <a href="https://www.linkedin.com/in/herve-tale-kalachi/">LinkedIn</a>
+    </p>
+  </footer>
+</body>
+</html>
