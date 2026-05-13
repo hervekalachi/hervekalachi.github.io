@@ -1,196 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News - Hervé Talé Kalachi</title>
-    <meta name="description" content="Latest news and updates from Hervé Talé Kalachi's research and academic activities.">
-    <meta name="keywords" content="Hervé Talé Kalachi, news, cryptography, coding theory, cyber security, academic updates">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; background-color: #f9f9f9; }
-        header { background-image: url('images/crypto-background.png'); background-size: cover; background-position: center; color: #fff; padding: 40px 0; text-align: center; position: relative; }
-        .header-overlay { background-color: rgba(44, 62, 80, 0.8); position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .header-content { position: relative; z-index: 1; }
-        .profile-img-header { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #fff; margin-bottom: 15px; }
-        nav { display: flex; justify-content: center; background-color: #34495e; padding: 10px 0; }
-        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        nav a:hover { color: #1abc9c; }
-        .container { max-width: 1200px; margin: 20px auto; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        .news-list { list-style-type: none; padding: 0; }
-        .news-item { margin-bottom: 25px; padding: 20px; border-left: 4px solid #1abc9c; background-color: #f4f4f4; }
-        .news-date { color: #1abc9c; font-weight: bold; margin-bottom: 5px; }
-        .news-title { color: #2c3e50; margin: 0 0 10px; }
-        .news-description { color: #555; }
-        .news-link { color: #1abc9c; text-decoration: none; }
-        .news-link:hover { text-decoration: underline; }
-        footer { text-align: center; padding: 20px 0; background-color: #2c3e50; color: #fff; margin-top: 40px; }
-        footer a { color: #1abc9c; text-decoration: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>News - Hervé Talé Kalachi</title>
+
+  <meta name="description" content="Latest news and academic updates from Hervé Talé Kalachi on post-quantum cryptography, code-based cryptography, cybersecurity, cloud steganography, digital trust, teaching and research activities.">
+
+  <meta name="keywords" content="Hervé Talé Kalachi, news, academic updates, cybersecurity, digital trust, post-quantum cryptography, code-based cryptography, rank metric codes, cryptanalysis, cloud steganography, privacy, teaching, research, Cameroon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    /* Base styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-image: url('images/crypto-background.png');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .header-overlay {
+      background-color: rgba(44, 62, 80, 0.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      margin: 10px 0 5px 0;
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 1.1em;
+    }
+
+    nav {
+      background-color: #34495e;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 25px;
+    }
+
+    a {
+      color: #1a73b7;
+    }
+
+    a:hover {
+      color: #1abc9c;
+    }
+
+    /* News page styles */
+    .intro-box {
+      margin-bottom: 25px;
+      padding: 15px 20px;
+      background-color: #f4f8fb;
+      border-left: 4px solid #1abc9c;
+    }
+
+    .news-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .news-item {
+      margin-bottom: 25px;
+      padding: 20px;
+      border-left: 4px solid #1abc9c;
+      background-color: #f4f8fb;
+    }
+
+    .news-date {
+      color: #1abc9c;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .news-title {
+      color: #2c3e50;
+      margin: 0 0 10px;
+    }
+
+    .news-description {
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    .news-link {
+      color: #1abc9c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .news-link:hover {
+      text-decoration: underline;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #1abc9c;
+      color: #fff;
+      font-size: 0.78em;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #2c3e50;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #1abc9c;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .container {
+        margin: 15px;
+        padding: 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <div class="header-overlay"></div>
-        <div class="header-content">
-            <h1>Hervé Talé Kalachi</h1>
-        </div>
-    </header>
-    <nav>
-        <a href="./index.html">Home</a>
-        <a href="./publications.html">Publications</a>
-        <a href="./talks.html">Talks</a>
-        <a href="./teaching.html">Teaching</a>
-        <a href="./students.html">Students</a>
-        <a href="./news.html">News</a>
-    </nav>
-
-    <div class="container">
-        <h2>Latest News</h2>
-        <ul class="news-list">
-
-            <li class="news-item">
-                <div class="news-date"><i class="fas fa-calendar-alt"></i> 15 April 2026</div>
-                <h3 class="news-title">Keynote at Work-GMC 2026</h3>
-                <p class="news-description">
-                    Delivered a keynote entitled “Protecting Tomorrow’s Cameroonian Cyberspace: Building Digital Trust in the Post-Quantum Era” at the 
-                    <a href="https://workgmc.univ-dschang.org/" class="news-link" target="_blank">Work-GMC 2026 workshop</a> 
-                    at the University of Dschang, Cameroon. The talk highlighted the role of digital trust, cybersecurity governance, and post-quantum preparedness in supporting Cameroon’s digital transformation.
-                </p>
-            </li>
-            <li class="news-item">
-                <div class="news-date"><i class="fas fa-calendar-alt"></i> 18 February 2025</div>
-                <h3 class="news-title">Reviewer for IEEE ISIT2025</h3>
-                <p class="news-description">
-                 I am happy to serve as reviewer for <a href="https://2025.ieee-isit.org/" class="news-link" target="_blank">IEEE ISIT2025</a>
-                </p>
-            </li>
-            
-        	<li class="news-item">
-    	    		<div class="news-date"><i class="fas fa-chalkboard-teacher"></i> December 2024</div>
-                	<h3 class="news-title">Lecture at UBaCybercrypto Center</h3>
-                	<p class="news-description">
-                    Delivered a series of lectures on code-based cryptography for Master students at the <a href="https://ubacybercryptocenter.cm/en" class="news-link" target="_blank">Centre for Cybersecurity and Mathematical Cryptology</a>, Bamenda, Cameroon.
-                	</p>
-               </li>
-
-            
-            <li class="news-item">
-                <div class="news-date"><i class="fas fa-calendar-alt"></i> 15 December 2024</div>
-                <h3 class="news-title">Joined the PC of AfricaCrypt2025</h3>
-                <p class="news-description">
-                 I will serve on the Program Committee at <a href="https://africacrypt2025.sciencesconf.org/" class="news-link" target="_blank">AfricaCrypt 2025</a>
-                </p>
-            </li>
-            
-            
-             <!-- CIMPA School -->
-            <li class="news-item">
-                <div class="news-date"><i class="fas fa-chalkboard-teacher"></i> 15 - 26 July 2024</div>
-                <h3 class="news-title">Lecture at CIMPA School</h3>
-                <p class="news-description">
-                    Delivered a series of lectures on code-based cryptography at the <a href="https://douala2024.gaati.org/cours/" class="news-link" target="_blank">CIMPA School</a> in Douala, Cameroon, 
-                    focusing on algebraic methods in information theory.
-                </p>
-            </li>
-            
-            <!-- AfricaCrypt 2024 -->
-            
-            <li class="news-item">
-                <div class="news-date"><i class="fas fa-calendar-alt"></i> 11 July 2024</div>
-                <h3 class="news-title">Keynote at AfricaCrypt 2024</h3>
-                <p class="news-description">
-                    Presented our work "On the Generalizations of the Rank Metric Over Finite Chain Rings" at the 
-                    <a href="https://www.africacrypt2024.com/" class="news-link" target="_blank">AfricaCrypt conference</a>. 
-                    Discussed new directions for rank-based cryptography with international researchers.
-                </p>
-            </li>
-            
-            
-            <li class="news-item">
-                <div class="news-date"><i class="fas fa-calendar-alt"></i> April 2024</div>
-                <h3 class="news-title">Accepted at AfricaCrypt2024</h3>
-                <p class="news-description">
-                 The paper "On the Generalizations of the Rank Metric Over Finite Chain Rings" will appear at <a href="https://www.africacrypt2024.com/" class="news-link" target="_blank">AfricaCrypt2024</a>
-                </p>
-            </li>
-
-
-            <li class="news-item">
-                <div class="news-date"><i class="fas fa-calendar-alt"></i> October 2023</div>
-                <h3 class="news-title">Joining the PC of AfricaCrypt2024</h3>
-                <p class="news-description">
-                 I will serve on the Program Committee at <a href="https://www.africacrypt2024.com/" class="news-link" target="_blank">AfricaCrypt2024</a>.
-                </p>
-            </li>
-
-           <li class="news-item">
-                <div class="news-date"><i class="fas fa-calendar-alt"></i> March 2023</div>
-                <h3 class="news-title">Joining the PC of CloudNet2023</h3>
-                <p class="news-description">
-                 I will serve on the Program Committee at <a href="https://cloudnet2023.ieee-cloudnet.org/" class="news-link" target="_blank">CloudNet2023</a>.
-                </p>
-            </li>
-
-            <!-- Teaching Innovation -->
-
-            <!-- Past Achievements -->
-            <li class="news-item">
-                <div class="news-date"><i class="fas fa-award"></i> December 2021</div>
-                <h3 class="news-title">SG-NAPI Award Recipient</h3>
-                <p class="news-description">
-                    Awarded the Seed Grant for New African Principal Investigators (SG-NAPI) to support the project RaCoFRAC on the construction Rank-metric Codes over Finite Rings and Application to Cryptography.
-                </p>
-            </li>
-            
-            <li class="news-item">
-                <div class="news-date"><i class="fas fa-laptop-code"></i> October 2021</div>
-                <h3 class="news-title">Launched New Python Programming Course</h3>
-                <p class="news-description">
-                    Introduced a hands-on Python curriculum for second-year engineering students at the National Advanced School of Engineering, Yaoundé.
-                </p>
-            </li>
-
-            <li class="news-item">
-                <div class="news-date"><i class="fas fa-university"></i> May 2021</div>
-                <h3 class="news-title">New Career Milestone</h3>
-                <p class="news-description">
-                   Promoted to senior lecturer at the University of Yaounde 1.
-                </p>
-            </li>
-
-            <li class="news-item">
-                <div class="news-date"><i class="fas fa-laptop-code"></i> October 2020</div>
-                <h3 class="news-title">Launched New C Programming Course</h3>
-                <p class="news-description">
-                    Introduced a hands-on C curriculum for second-year engineering students at the National Advanced School of Engineering, Yaoundé, focusing on algorithmic problem-solving.
-                </p>
-            </li>
-            
-            <li class="news-item">
-                <div class="news-date"><i class="fas fa-university"></i> September 2020</div>
-                <h3 class="news-title">Starting a new position at NASEY</h3>
-                <p class="news-description">
-                    I join the National Advanced School of Engineering of Yaoundé (NASEY), as assistant lecturer in the department of computer engineering.
-                </p>
-            </li>
-
-            <li class="news-item">
-                <div class="news-date"><i class="fas fa-university"></i> January 2020</div>
-                <h3 class="news-title">Visiting Postdoc at the Simons Institute</h3>
-                <p class="news-description">
-                    Participated in the <a href="https://simons.berkeley.edu/programs/lattices-algorithms-complexity-cryptography" class="news-link" target="_blank">Lattices: Algorithms, Complexity, and Cryptography</a> program at Simons Institute for the Theory of Computing (Berkeley-USA).
-                </p>
-            </li>
-
-        </ul>
+  <header>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <h1>Hervé Talé Kalachi</h1>
+      <p>News and Academic Updates</p>
     </div>
-    <footer>
-        <p>&copy; 2025 Hervé Talé Kalachi | 
-            <a href="https://scholar.google.fr/citations?user=2J45ZG0AAAAJ&hl=fr">Google Scholar</a> | 
-            <a href="https://orcid.org/0000-0002-2590-4159">ORCID</a> | 
-            <a href="https://www.linkedin.com/in/herve-tale-kalachi/">LinkedIn</a>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./publications.html">Publications</a>
+    <a href="./talks.html">Talks</a>
+    <a href="./teaching.html">Teaching</a>
+    <a href="./students.html">Students</a>
+    <a href="./news.html">News</a>
+  </nav>
+
+  <div class="container">
+    <h2>Latest News</h2>
+
+    <div class="intro-box">
+      <p>
+        Selected news and updates on my research, publications, teaching activities, talks,
+        scientific service and collaborations in cryptography, cybersecurity, information security,
+        post-quantum cryptography and digital trust.
+      </p>
+    </div>
+
+    <ul class="news-list">
+
+      <li class="news-item">
+  <span class="tag">Publications</span>
+  <div class="news-date"><i class="fas fa-calendar-alt"></i> 2026</div>
+  <h3 class="news-title">Recent 2026 publications</h3>
+  <p class="news-description">
+    Several recent papers have appeared in journals at the interface of cryptography,
+    coding theory, cloud security and information protection:
+  </p>
+  <ul class="news-description">
+    <li>
+      “Contextual Cloud Steganography (CCS): Breaking the Capacity-Security Trade-Off”,
+      with S. W. Mossebo Tcheunteu, L. Moyou Metcheka, S. G. R. Ekodeck,
+      R. Ndoundam and A. Tchana, published in
+      <em>IEEE Transactions on Cloud Computing</em>.
+      <a href="https://doi.org/10.1109/TCC.2026.3663281" class="news-link" target="_blank" rel="noopener noreferrer">DOI</a>
+    </li>
+    <li>
+      “High embedding capacity text steganography using optimal color combinations from 24-bit space”,
+      with S. W. Mossebo Tcheunteu, S. G. R. Ekodeck, L. Moyou Metcheka,
+      J. M. A. Moto and R. Ndoundam, published in
+      <em>Journal of Computer Security</em>.
+      <a href="https://doi.org/10.1177/0926227X251411812" class="news-link" target="_blank" rel="noopener noreferrer">DOI</a>
+    </li>
+    <li>
+      “Generalized subspace subcodes in the rank metric”,
+      with O. Ndiaye and P. A. Kidoudou, published in
+      <em>Journal of Algebra Combinatorics Discrete Structures and Applications</em>,
+      13(2): 199–216.
+      <a href="https://doi.org/10.13069/jacodesmath.v13i2.334" class="news-link" target="_blank" rel="noopener noreferrer">DOI</a>
+    </li>
+  </ul>
+</li>
+
+      <li class="news-item">
+        <span class="tag">Keynote</span>
+        <div class="news-date"><i class="fas fa-calendar-alt"></i> 15 April 2026</div>
+        <h3 class="news-title">Keynote at Work-GMC 2026</h3>
+        <p class="news-description">
+          Delivered a keynote entitled
+          “Protecting Tomorrow’s Cameroonian Cyberspace: Building Digital Trust in the Post-Quantum Era”
+          at the
+          <a href="https://workgmc.univ-dschang.org/" class="news-link" target="_blank" rel="noopener noreferrer">Work-GMC 2026 workshop</a>
+          at the University of Dschang, Cameroon. The talk highlighted the role of digital trust,
+          cybersecurity governance, and post-quantum preparedness in supporting Cameroon’s digital transformation.
         </p>
-    </footer>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Service</span>
+        <div class="news-date"><i class="fas fa-calendar-alt"></i> 18 February 2025</div>
+        <h3 class="news-title">Reviewer for IEEE ISIT 2025</h3>
+        <p class="news-description">
+          I am serving as a reviewer for
+          <a href="https://2025.ieee-isit.org/" class="news-link" target="_blank" rel="noopener noreferrer">IEEE ISIT 2025</a>.
+        </p>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Teaching</span>
+        <div class="news-date"><i class="fas fa-chalkboard-teacher"></i> December 2024</div>
+        <h3 class="news-title">Lecture at the Center for Cybersecurity and Mathematical Cryptology</h3>
+        <p class="news-description">
+          Delivered a series of lectures on code-based cryptography for Master students at the
+          <a href="https://ubacybercryptocenter.cm/en" class="news-link" target="_blank" rel="noopener noreferrer">
+            Center for Cybersecurity and Mathematical Cryptology
+          </a>,
+          University of Bamenda, Cameroon.
+        </p>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Service</span>
+        <div class="news-date"><i class="fas fa-calendar-alt"></i> 15 December 2024</div>
+        <h3 class="news-title">Program Committee Member for AFRICACRYPT 2025</h3>
+        <p class="news-description">
+          I will serve on the Program Committee of
+          <a href="https://africacrypt2025.sciencesconf.org/" class="news-link" target="_blank" rel="noopener noreferrer">AFRICACRYPT 2025</a>.
+        </p>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Teaching</span>
+        <div class="news-date"><i class="fas fa-chalkboard-teacher"></i> 15–26 July 2024</div>
+        <h3 class="news-title">Lecture at CIMPA School</h3>
+        <p class="news-description">
+          Delivered a series of lectures on code-based cryptography at the
+          <a href="https://douala2024.gaati.org/cours/" class="news-link" target="_blank" rel="noopener noreferrer">CIMPA School</a>
+          in Douala, Cameroon, focusing on algebraic methods in information theory and post-quantum cryptography.
+        </p>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Conference</span>
+        <div class="news-date"><i class="fas fa-calendar-alt"></i> 11 July 2024</div>
+        <h3 class="news-title">Presentation at AFRICACRYPT 2024</h3>
+        <p class="news-description">
+          Presented our work
+          “On the Generalizations of the Rank Metric over Finite Chain Rings”
+          at
+          <a href="https://www.africacrypt2024.com/" class="news-link" target="_blank" rel="noopener noreferrer">AFRICACRYPT 2024</a>
+          in Douala, Cameroon, and discussed new directions for rank-based cryptography with international researchers.
+        </p>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Publication</span>
+        <div class="news-date"><i class="fas fa-calendar-alt"></i> April 2024</div>
+        <h3 class="news-title">Paper accepted at AFRICACRYPT 2024</h3>
+        <p class="news-description">
+          The paper
+          “On the Generalizations of the Rank Metric over Finite Chain Rings”
+          was accepted at
+          <a href="https://www.africacrypt2024.com/" class="news-link" target="_blank" rel="noopener noreferrer">AFRICACRYPT 2024</a>.
+        </p>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Service</span>
+        <div class="news-date"><i class="fas fa-calendar-alt"></i> October 2023</div>
+        <h3 class="news-title">Program Committee Member for AFRICACRYPT 2024</h3>
+        <p class="news-description">
+          I served on the Program Committee of
+          <a href="https://www.africacrypt2024.com/" class="news-link" target="_blank" rel="noopener noreferrer">AFRICACRYPT 2024</a>.
+        </p>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Service</span>
+        <div class="news-date"><i class="fas fa-calendar-alt"></i> March 2023</div>
+        <h3 class="news-title">Program Committee Member for IEEE CloudNet 2023</h3>
+        <p class="news-description">
+          I served on the Program Committee of
+          <a href="https://cloudnet2023.ieee-cloudnet.org/" class="news-link" target="_blank" rel="noopener noreferrer">IEEE CloudNet 2023</a>.
+        </p>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Award</span>
+        <div class="news-date"><i class="fas fa-award"></i> December 2021</div>
+        <h3 class="news-title">SG-NAPI Award Recipient</h3>
+        <p class="news-description">
+          Awarded the Seed Grant for New African Principal Investigators (SG-NAPI) to support the project
+          RaCoFRAC on the construction of rank-metric codes over finite rings and their applications to cryptography.
+        </p>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Teaching</span>
+        <div class="news-date"><i class="fas fa-laptop-code"></i> October 2021</div>
+        <h3 class="news-title">Launched New Python Programming Course</h3>
+        <p class="news-description">
+          Introduced a hands-on Python programming curriculum for second-year engineering students at the
+          National Advanced School of Engineering of Yaounde.
+        </p>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Career</span>
+        <div class="news-date"><i class="fas fa-university"></i> May 2021</div>
+        <h3 class="news-title">New Career Milestone</h3>
+        <p class="news-description">
+          Promoted to Senior Lecturer at the University of Yaounde I.
+        </p>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Teaching</span>
+        <div class="news-date"><i class="fas fa-laptop-code"></i> October 2020</div>
+        <h3 class="news-title">Launched New C Programming Course</h3>
+        <p class="news-description">
+          Introduced a hands-on C programming curriculum for second-year engineering students at the
+          National Advanced School of Engineering of Yaounde, focusing on algorithmic problem-solving.
+        </p>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Career</span>
+        <div class="news-date"><i class="fas fa-university"></i> September 2020</div>
+        <h3 class="news-title">Starting a New Position at NASEY</h3>
+        <p class="news-description">
+          I joined the National Advanced School of Engineering of Yaounde (NASEY),
+          University of Yaounde I, as Assistant Lecturer in the Department of Computer Engineering.
+        </p>
+      </li>
+
+      <li class="news-item">
+        <span class="tag">Research visit</span>
+        <div class="news-date"><i class="fas fa-university"></i> January 2020</div>
+        <h3 class="news-title">Visiting Postdoc at the Simons Institute</h3>
+        <p class="news-description">
+          Participated in the
+          <a href="https://simons.berkeley.edu/programs/lattices-algorithms-complexity-cryptography" class="news-link" target="_blank" rel="noopener noreferrer">
+            Lattices: Algorithms, Complexity, and Cryptography
+          </a>
+          program at the Simons Institute for the Theory of Computing, Berkeley, USA.
+        </p>
+      </li>
+
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Hervé Talé Kalachi |
+      <a href="https://scholar.google.fr/citations?user=2J45ZG0AAAAJ&hl=fr">Google Scholar</a> |
+      <a href="https://orcid.org/0000-0002-2590-4159">ORCID</a> |
+      <a href="https://www.linkedin.com/in/herve-tale-kalachi/">LinkedIn</a>
+    </p>
+  </footer>
 </body>
 </html>
