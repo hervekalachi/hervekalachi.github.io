@@ -1,217 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Hervé Talé Kalachi</title>
-    <meta name="description" content="Complete list of publications by Hervé Talé Kalachi in cryptography and coding theory.">
-    <meta name="keywords" content="Hervé Talé Kalachi, publications, cryptography, cyber security, coding theory">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Styles de base (identique à index.html) */
-        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; background-color: #f9f9f9; }
-        header { background-image: url('images/crypto-background.png'); background-size: cover; background-position: center; color: #fff; padding: 40px 0; text-align: center; position: relative; }
-        .header-overlay { background-color: rgba(44, 62, 80, 0.8); position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .header-content { position: relative; z-index: 1; }
-        .profile-img-header { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #fff; margin-bottom: 15px; }
-        nav { background-color: #34495e; padding: 15px 0; text-align: center; }
-        nav a { color: #fff; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 1.1em; }
-        nav a:hover { color: #1abc9c; }
-        .container { max-width: 1200px; margin: 30px auto; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        footer { text-align: center; padding: 20px 0; background-color: #2c3e50; color: #fff; }
-        footer a { color: #1abc9c; text-decoration: none; }
-        @media (max-width: 768px) { nav a { display: block; margin: 10px 0; } .profile-img-header { width: 100px; height: 100px; } }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications - Hervé Talé Kalachi</title>
 
-        /* Styles spécifiques aux publications */
-        .filter-buttons { text-align: center; margin-bottom: 25px; }
-        .filter-buttons button { background: #34495e; color: #fff; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 4px; }
-        .filter-buttons button.active { background: #1abc9c; }
-        .publication-list { list-style-type: none; padding: 0; }
-        .publication-item { margin-bottom: 20px; padding: 15px; border-left: 4px solid #1abc9c; background: #f8f9fa; }
-        .publication-item h3 { margin: 0 0 10px; color: #2c3e50; }
-        .authors { font-style: italic; color: #666; display: block; }
-        .book { color: #1abc9c; font-weight: bold; }
-        .doi-link { color: #1abc9c; text-decoration: none; }
-        .doi-link:hover { text-decoration: underline; }
-    </style>
+  <meta name="description" content="Publications by Hervé Talé Kalachi on post-quantum cryptography, code-based cryptography, rank-metric codes, cryptanalysis, cloud steganography, cybersecurity and information security.">
+
+  <meta name="keywords" content="Hervé Talé Kalachi, publications, post-quantum cryptography, code-based cryptography, rank metric codes, Gabidulin codes, LRPC codes, cryptanalysis, cloud steganography, cybersecurity, information security, coding theory">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    /* General styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-image: url('images/crypto-background.png');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .header-overlay {
+      background-color: rgba(44, 62, 80, 0.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      margin: 10px 0 5px 0;
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 1.1em;
+    }
+
+    nav {
+      background-color: #34495e;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #2c3e50;
+      color: #fff;
+    }
+
+    footer a {
+      color: #1abc9c;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Publications page styles */
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .filter-buttons button {
+      background: #34495e;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .filter-buttons button:hover {
+      background: #2c3e50;
+    }
+
+    .filter-buttons button.active {
+      background: #1abc9c;
+    }
+
+    .publication-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .publication-item {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-left: 4px solid #1abc9c;
+      background: #f4f8fb;
+    }
+
+    .publication-item h3 {
+      margin: 0 0 10px;
+      color: #2c3e50;
+      font-size: 1.12em;
+    }
+
+    .authors {
+      font-style: italic;
+      color: #666;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .book {
+      color: #1abc9c;
+      font-weight: bold;
+    }
+
+    .pub-links {
+      margin-top: 6px;
+    }
+
+    .doi-link {
+      color: #1abc9c;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+
+    .doi-link:hover {
+      text-decoration: underline;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #1abc9c;
+      color: #fff;
+      font-size: 0.78em;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .container {
+        margin: 15px;
+        padding: 18px;
+      }
+
+      .filter-buttons button {
+        padding: 8px 12px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <div class="header-overlay"></div>
-        <div class="header-content">
-            <h1>Hervé Talé Kalachi</h1>
-        </div>
-    </header>
+  <header>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <h1>Hervé Talé Kalachi</h1>
+      <p>Publications</p>
+    </div>
+  </header>
 
-    <!-- Navigation horizontale -->
-    <nav>
-        <a href="./index.html">Home</a>
-        <a href="./publications.html">Publications</a>
-        <a href="./talks.html">Talks</a>
-        <a href="./teaching.html">Teaching</a>
-        <a href="./students.html">Students</a>
-        <a href="./news.html">News</a>
-    </nav>
+  <!-- Navigation -->
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./publications.html">Publications</a>
+    <a href="./talks.html">Talks</a>
+    <a href="./teaching.html">Teaching</a>
+    <a href="./students.html">Students</a>
+    <a href="./news.html">News</a>
+  </nav>
 
-    <div class="container">
-        <h2>Publications</h2>
-        <div class="filter-buttons">
-            <button onclick="filterPublications('all')" class="active">All</button>
-            <button onclick="filterPublications('2026')">2026</button>
-            <button onclick="filterPublications('2024')">2024</button>
-            <button onclick="filterPublications('2023')">2023</button>
-            <button onclick="filterPublications('2021')">2021</button>
-            <button onclick="filterPublications('2020')">2020</button>
-            <button onclick="filterPublications('2018')">2018</button>
-            <button onclick="filterPublications('2017')">2017</button>
-            <button onclick="filterPublications('2015')">2015</button>
-        </div>
+  <div class="container">
+    <h2>Publications</h2>
 
-        <ul class="publication-list">
-            <!-- 2026 Publications -->
-            
-            <li class="publication-item" data-year="2026">
-                <h3>Contextual Cloud Steganography(CCS): Breaking the Capacity-Security Trade-Off</h3>
-                <span class="authors">(with Stéphane Willy Mossebo Tcheunteu, Leonel Moyou Metcheka, Stéphane Gael Raymond Ekodeck, René Ndoundam and Alain Tchana)</span>
-                <span class="book"> IEEE Transactions on Cloud Computing</span>, 2026
-                <a href="https://doi.org/10.1109/TCC.2026.3663281" class="doi-link" target="_blank">DOI</a>
-            </li>
-            
-            <li class="publication-item" data-year="2026">
-                <h3>High embedding capacity text steganography using optimal color combinations from 24-bit space</h3>
-                <span class="authors">(with Stéphane Willy Mossebo Tcheunteu, Stéphane Gael Raymond Ekodeck, Leonel Moyou Metcheka, Jean Marsien Ayemidie Moto, and René Ndoundam)</span>
-                <span class="book">Journal of Computer Security</span>, 2026
-                <a href="https://doi.org/10.1177/0926227X251411812" class="doi-link" target="_blank">DOI</a>
-            </li>
-
-            <!-- 2024 Publications -->
-            <li class="publication-item" data-year="2024">
-                <h3>Security assessment of the LG cryptosystem</h3>
-                <span class="authors">(with Étienne Burle, Freddy Lende Metouke, and Ayoub Otmani)</span>
-                <span class="book">Applicable Algebra in Engineering, Communication and Computing</span>, 2024
-                <a href="https://doi.org/10.1007/s00200-024-00671-5" class="doi-link" target="_blank">DOI</a>
-            </li>
-            <li class="publication-item" data-year="2024">
-                <h3>On the Generalizations of the Rank Metric Over Finite Chain Rings</h3>
-                <span class="authors">(with Hermann Tchatchiem Kamche)</span>
-                <span class="book">Accepted to AfricaCrypt 2024</span>, 2024
-            </li>
-
-            <li class="publication-item" data-year="2024">
-                <h3><a href="https://link.springer.com/article/10.1007/s00200-024-00652-8">Solving systems of algebraic equations over finite commutative rings and applications</a></h3>
-                <span class="authors">(with Hermann Tchatchiem Kamche)</span>
-                <span class="book">Applicable Algebra in Engineering, Communication and Computing</span>, 2024
-                <a href="https://doi.org/10.1007/s00200-024-00652-8" class="doi-link">DOI</a>
-            </li>
-
-            <li class="publication-item" data-year="2024">
-                <h3>Low-rank parity-check codes over finite commutative rings</h3>
-                <span class="authors">(with Hermann Tchatchiem Kamche, Franck Rivel Kamwa Djomou & Emmanuel Fouotsa)</span>
-                <span class="book">Applicable Algebra in Engineering, Communication and Computing</span>, 2024
-                <a href="https://doi.org/10.1007/s00200-023-00641-3" class="doi-link">DOI</a>
-            </li>
-
-            <!-- 2023 Publications -->
-            <li class="publication-item" data-year="2023">
-                <h3>On the rank decoding problem over finite principal ideal rings</h3>
-                <span class="authors">(with Hermann Tchatchiem Kamche)</span>
-                <span class="book">Advances in Mathematics of Communications</span>, 2023
-                <a href="https://doi.org/10.3934/amc.2023003" class="doi-link">DOI</a>
-            </li>
-
-            <!-- 2021 Publications -->
-            <li class="publication-item" data-year="2021">
-                <h3>Generalization of low rank parity-check (LRPC) codes over the ring of integers modulo a positive integer</h3>
-                <span class="authors">(with Franck Rivel Kamwa Djomou & Emmanuel Fouotsa)</span>
-                <span class="book">Arabian Journal of Mathematics</span>, 2021
-                <a href="https://doi.org/10.1007/s40065-021-00327-z" class="doi-link">DOI</a>
-            </li>
-
-            <!-- 2020 Publications -->
-            <li class="publication-item" data-year="2020">
-                <h3>On the failure of the smart approach of the GPT cryptosystem</h3>
-                <span class="book">Cryptologia</span>, 2020
-                <a href="https://doi.org/10.1080/01611194.2020.1829181" class="doi-link">DOI</a>
-            </li>
-
-            <!-- 2018 Publications -->
-            <li class="publication-item" data-year="2018">
-                <h3>Polynomial-time key recovery attack on the Faure-Loidreau scheme based on Gabidulin codes</h3>
-                <span class="authors">(with Philippe Gaborit & Ayoub Otmani)</span>
-                <span class="book">Designs, Codes and Cryptography</span>, 2018
-                <a href="https://doi.org/10.1007/s10623-017-0402-0" class="doi-link">DOI</a>
-            </li>
-
-            <li class="publication-item" data-year="2018">
-                <h3>Improved cryptanalysis of rank metric schemes based on Gabidulin codes</h3>
-                <span class="authors">(with Ayoub Otmani & Selestin Ndjeya)</span>
-                <span class="book">Designs, Codes and Cryptography</span>, 2018
-                <a href="https://doi.org/10.1007/s10623-017-0434-5" class="doi-link">DOI</a>
-            </li>
-
-            <li class="publication-item" data-year="2018">
-                <h3>Cryptanalysis of a Public Key Encryption Scheme Based on QC-LDPC and QC-MDPC Codes</h3>
-                <span class="authors">(with Vlad Dragoi)</span>
-                <span class="book">IEEE Communications Letters</span>, 2018
-                <a href="https://doi.org/10.1109/LCOMM.2017.2779449" class="doi-link">DOI</a>
-            </li>
-
-            <!-- Thèse -->
-            <li class="publication-item" data-year="2017">
-                <h3>Security of cryptographic protocols based on coding theory</h3>
-                <span class="book">PhD Thesis - University of Rouen & University of Yaounde 1</span>, 2017
-                <a href="https://tel.archives-ouvertes.fr/tel-01689877/document" class="doi-link">Full Text</a>
-            </li>
-            <!-- Publications 2017 et antérieures -->
-            <li class="publication-item" data-year="2017">
-                <h4>Evolution of the McEliece Public Key Encryption Scheme</h4>
-                <span class="authors">(with Vlad Dragoi and Dominic Bucerzan)</span>
-                <span class="book">Innovative Security Solutions for Information Technology and Communications (SecITC 2017)</span>
-                <span class="note">p. 129–149</span>
-            </li>
-
-            <li class="publication-item" data-year="2015">
-                <h3>Square Code Attack on a Modified Sidelnikov Cryptosystem</h3>
-                <span class="authors">(with Ayoub Otmani)</span>
-                <span class="book">Proceedings of Codes, Cryptology, and Information Security (C2SI 2015)</span>
-                <span class="note">p. 173–183</span>
-            </li>
-        </ul>
+    <div class="filter-buttons">
+      <button onclick="filterPublications('all', this)" class="active">All</button>
+      <button onclick="filterPublications('2026', this)">2026</button>
+      <button onclick="filterPublications('2025', this)">2025</button>
+      <button onclick="filterPublications('2024', this)">2024</button>
+      <button onclick="filterPublications('2021', this)">2021</button>
+      <button onclick="filterPublications('2020', this)">2020</button>
+      <button onclick="filterPublications('2018', this)">2018</button>
+      <button onclick="filterPublications('2017', this)">2017</button>
+      <button onclick="filterPublications('2015', this)">2015</button>
     </div>
 
-     <footer>
-        <p>&copy; 2025 Hervé Talé Kalachi | 
-            <a href="https://scholar.google.fr/citations?user=2J45ZG0AAAAJ&hl=fr">Google Scholar</a> | 
-            <a href="https://orcid.org/0000-0002-2590-4159">ORCID</a> | 
-            <a href="https://www.linkedin.com/in/herve-tale-kalachi/">LinkedIn</a>
-        </p>
-    </footer>
+    <ul class="publication-list">
 
-    <script>
-        function filterPublications(year) {
-            // Masquer toutes les publications
-            document.querySelectorAll('.publication-item').forEach(item => {
-                item.style.display = 'none';
-            });
+      <!-- 2026 Publications -->
+      <li class="publication-item" data-year="2026">
+        <span class="tag">New</span>
+        <h3>Generalized subspace subcodes in the rank metric</h3>
+        <span class="authors">
+          Ousmane Ndiaye, Peter Arnaud Kidoudou, and Hervé Talé Kalachi
+        </span>
+        <span class="book">Journal of Algebra Combinatorics Discrete Structures and Applications</span>,
+        13(2): 199–216, 2026.
+        <div class="pub-links">
+          <a href="https://doi.org/10.13069/jacodesmath.v13i2.334" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+          <a href="papers/Generalized_subspace_subcodes_rank_metric.pdf" class="doi-link" target="_blank" rel="noopener noreferrer">
+            PDF
+          </a>
+        </div>
+      </li>
 
-            // Afficher les publications de l'année sélectionnée
-            if (year === 'all') {
-                document.querySelectorAll('.publication-item').forEach(item => {
-                    item.style.display = 'block';
-                });
-            } else {
-                document.querySelectorAll(`.publication-item[data-year="${year}"]`).forEach(item => {
-                    item.style.display = 'block';
-                });
-            }
+      <li class="publication-item" data-year="2026">
+        <h3>Contextual Cloud Steganography (CCS): Breaking the Capacity-Security Trade-Off</h3>
+        <span class="authors">
+          Stéphane Willy Mossebo Tcheunteu, Leonel Moyou Metcheka, Hervé Talé Kalachi,
+          Stéphane Gaël Raymond Ekodeck, René Ndoundam, and Alain Tchana
+        </span>
+        <span class="book">IEEE Transactions on Cloud Computing</span>, 2026.
+        <div class="pub-links">
+          <a href="https://doi.org/10.1109/TCC.2026.3663281" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
 
-            // Mettre à jour le style des boutons
-            document.querySelectorAll('.filter-buttons button').forEach(button => {
-                button.classList.remove('active');
-            });
-            event.target.classList.add('active');
+      <li class="publication-item" data-year="2026">
+        <h3>High embedding capacity text steganography using optimal color combinations from 24-bit space</h3>
+        <span class="authors">
+          Stéphane Willy Mossebo Tcheunteu, Hervé Talé Kalachi, Stéphane Gaël Raymond Ekodeck,
+          Leonel Moyou Metcheka, Jean Marsien Ayemidie Moto, and René Ndoundam
+        </span>
+        <span class="book">Journal of Computer Security</span>, 2026.
+        <div class="pub-links">
+          <a href="https://doi.org/10.1177/0926227X251411812" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
+
+      <li class="publication-item" data-year="2026">
+        <h3>Security assessment of the LG cryptosystem</h3>
+        <span class="authors">
+          Étienne Burle, Hervé Talé Kalachi, Freddy Lende Metouke, and Ayoub Otmani
+        </span>
+        <span class="book">Applicable Algebra in Engineering, Communication and Computing</span>,
+        37(1): 187–198, 2026.
+        <div class="pub-links">
+          <a href="https://doi.org/10.1007/s00200-024-00671-5" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
+
+      <!-- 2025 Publications -->
+      <li class="publication-item" data-year="2025">
+        <h3>Solving systems of algebraic equations over finite commutative rings and applications</h3>
+        <span class="authors">
+          Hermann Tchatchiem Kamche and Hervé Talé Kalachi
+        </span>
+        <span class="book">Applicable Algebra in Engineering, Communication and Computing</span>,
+        36: 1083–1111, 2025.
+        <div class="pub-links">
+          <a href="https://doi.org/10.1007/s00200-024-00652-8" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
+
+      <li class="publication-item" data-year="2025">
+        <h3>Low-rank parity-check codes over finite commutative rings</h3>
+        <span class="authors">
+          Hermann Tchatchiem Kamche, Hervé Talé Kalachi, Franck Rivel Kamwa Djomou,
+          and Emmanuel Fouotsa
+        </span>
+        <span class="book">Applicable Algebra in Engineering, Communication and Computing</span>,
+        36: 819–845, 2025.
+        <div class="pub-links">
+          <a href="https://doi.org/10.1007/s00200-023-00641-3" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
+
+      <!-- 2024 Publications -->
+      <li class="publication-item" data-year="2024">
+        <h3>On the rank decoding problem over finite principal ideal rings</h3>
+        <span class="authors">
+          Hervé Talé Kalachi and Hermann Tchatchiem Kamche
+        </span>
+        <span class="book">Advances in Mathematics of Communications</span>,
+        18(5): 1492–1513, 2024.
+        <div class="pub-links">
+          <a href="https://doi.org/10.3934/amc.2023003" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
+
+      <li class="publication-item" data-year="2024">
+        <h3>On the Generalizations of the Rank Metric over Finite Chain Rings</h3>
+        <span class="authors">
+          Hermann Tchatchiem Kamche and Hervé Talé Kalachi
+        </span>
+        <span class="book">Progress in Cryptology -- AFRICACRYPT 2024, LNCS 14861</span>, 2024.
+        <div class="pub-links">
+          <a href="https://doi.org/10.1007/978-3-031-64381-1_9" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
+
+      <!-- 2021 Publications -->
+      <li class="publication-item" data-year="2021">
+        <h3>Generalization of low rank parity-check (LRPC) codes over the ring of integers modulo a positive integer</h3>
+        <span class="authors">
+          Franck Rivel Kamwa Djomou, Hervé Talé Kalachi, and Emmanuel Fouotsa
+        </span>
+        <span class="book">Arabian Journal of Mathematics</span>,
+        10: 357–366, 2021.
+        <div class="pub-links">
+          <a href="https://doi.org/10.1007/s40065-021-00327-z" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
+
+      <!-- 2020 Publications -->
+      <li class="publication-item" data-year="2020">
+        <h3>On the failure of the smart approach of the GPT cryptosystem</h3>
+        <span class="authors">
+          Hervé Talé Kalachi
+        </span>
+        <span class="book">Cryptologia</span>, 46(2): 167–182, 2021.
+        <div class="pub-links">
+          <a href="https://doi.org/10.1080/01611194.2020.1829181" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
+
+      <!-- 2018 Publications -->
+      <li class="publication-item" data-year="2018">
+        <h3>Polynomial-time key recovery attack on the Faure-Loidreau scheme based on Gabidulin codes</h3>
+        <span class="authors">
+          Philippe Gaborit, Ayoub Otmani, and Hervé Talé Kalachi
+        </span>
+        <span class="book">Designs, Codes and Cryptography</span>,
+        86(7): 1391–1403, 2018.
+        <div class="pub-links">
+          <a href="https://doi.org/10.1007/s10623-017-0402-0" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
+
+      <li class="publication-item" data-year="2018">
+        <h3>Improved cryptanalysis of rank metric schemes based on Gabidulin codes</h3>
+        <span class="authors">
+          Ayoub Otmani, Hervé Talé Kalachi, and Sélestin Ndjeya
+        </span>
+        <span class="book">Designs, Codes and Cryptography</span>,
+        86(9): 1983–1996, 2018.
+        <div class="pub-links">
+          <a href="https://doi.org/10.1007/s10623-017-0434-5" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
+
+      <li class="publication-item" data-year="2018">
+        <h3>Cryptanalysis of a public key encryption scheme based on QC-LDPC and QC-MDPC codes</h3>
+        <span class="authors">
+          Vlad Drăgoi and Hervé Talé Kalachi
+        </span>
+        <span class="book">IEEE Communications Letters</span>,
+        22(2): 264–267, 2018.
+        <div class="pub-links">
+          <a href="https://doi.org/10.1109/LCOMM.2017.2779449" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
+
+      <!-- 2017 Publications -->
+      <li class="publication-item" data-year="2017">
+        <h3>Security of cryptographic protocols based on coding theory</h3>
+        <span class="authors">
+          Hervé Talé Kalachi
+        </span>
+        <span class="book">PhD Thesis -- University of Rouen-Normandie and University of Yaounde I</span>, 2017.
+        <div class="pub-links">
+          <a href="https://tel.archives-ouvertes.fr/tel-01689877/document" class="doi-link" target="_blank" rel="noopener noreferrer">
+            Full text
+          </a>
+        </div>
+      </li>
+
+      <li class="publication-item" data-year="2017">
+        <h3>Evolution of the McEliece public key encryption scheme</h3>
+        <span class="authors">
+          Dominic Bucerzan, Vlad Drăgoi, and Hervé Talé Kalachi
+        </span>
+        <span class="book">Innovative Security Solutions for Information Technology and Communications (SecITC 2017)</span>,
+        pp. 129–149, 2017.
+        <div class="pub-links">
+          <a href="https://doi.org/10.1007/978-3-319-69284-5_10" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
+
+      <!-- 2015 Publications -->
+      <li class="publication-item" data-year="2015">
+        <h3>Square code attack on a modified Sidelnikov cryptosystem</h3>
+        <span class="authors">
+          Ayoub Otmani and Hervé Talé Kalachi
+        </span>
+        <span class="book">Proceedings of Codes, Cryptology, and Information Security (C2SI 2015)</span>,
+        pp. 173–183, 2015.
+        <div class="pub-links">
+          <a href="https://doi.org/10.1007/978-3-319-18681-8_14" class="doi-link" target="_blank" rel="noopener noreferrer">
+            DOI
+          </a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Hervé Talé Kalachi |
+      <a href="https://scholar.google.fr/citations?user=2J45ZG0AAAAJ&hl=fr">Google Scholar</a> |
+      <a href="https://orcid.org/0000-0002-2590-4159">ORCID</a> |
+      <a href="https://www.linkedin.com/in/herve-tale-kalachi/">LinkedIn</a>
+    </p>
+  </footer>
+
+  <script>
+    function filterPublications(year, clickedButton) {
+      document.querySelectorAll('.publication-item').forEach(item => {
+        if (year === 'all' || item.getAttribute('data-year') === year) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
         }
-    </script>
+      });
+
+      document.querySelectorAll('.filter-buttons button').forEach(button => {
+        button.classList.remove('active');
+      });
+
+      if (clickedButton) {
+        clickedButton.classList.add('active');
+      }
+    }
+  </script>
 </body>
 </html>
