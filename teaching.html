@@ -1,148 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaching - Hervé Talé Kalachi</title>
-    <meta name="description" content="Teaching activities of Hervé Talé Kalachi, Senior Lecturer in Computer Engineering at the University of Yaounde 1.">
-    <meta name="keywords" content="Hervé Talé Kalachi, teaching, courses, cryptography, cyber security, coding theory, Python programming">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Base styles */
-        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; background-color: #f9f9f9; }
-        header { background-image: url('images/crypto-background.png'); background-size: cover; background-position: center; color: #fff; padding: 40px 0; text-align: center; position: relative; }
-        .header-overlay { background-color: rgba(44, 62, 80, 0.8); position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .header-content { position: relative; z-index: 1; }
-        .profile-img-header { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #fff; margin-bottom: 15px; }
-        nav { background-color: #34495e; padding: 15px 0; text-align: center; }
-        nav a { color: #fff; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 1.1em; }
-        nav a:hover { color: #1abc9c; }
-        .container { max-width: 1200px; margin: 30px auto; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        footer { text-align: center; padding: 20px 0; background-color: #2c3e50; color: #fff; }
-        footer a { color: #1abc9c; text-decoration: none; }
-        @media (max-width: 768px) { nav a { display: block; margin: 10px 0; } .profile-img-header { width: 100px; height: 100px; } }
-        
-                /* Styles spécifiques à l'enseignement */
-        .course-list { list-style-type: none; padding: 0; }
-        .course-item { margin-bottom: 20px; padding: 15px; border-left: 4px solid #1abc9c; background-color: #f4f4f4; }
-        .course-item h3 { margin: 0 0 10px; color: #2c3e50; }
-        .course-description { font-style: italic; color: #555; }
-        .resources-link { color: #1abc9c; text-decoration: none; }
-        .resources-link:hover { text-decoration: underline; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Teaching - Hervé Talé Kalachi</title>
+
+  <meta name="description" content="Teaching activities of Hervé Talé Kalachi in cryptography, data security, cybersecurity, Python programming, error-correcting codes, code-based cryptography and mathematical tools for computer science.">
+
+  <meta name="keywords" content="Hervé Talé Kalachi, teaching, courses, cryptography, data security, cybersecurity, Python programming, error-correcting codes, code-based cryptography, post-quantum cryptography, mathematical tools for computer science, ENSPY, University of Yaounde I">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    /* Base styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-image: url('images/crypto-background.png');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .header-overlay {
+      background-color: rgba(44, 62, 80, 0.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      margin: 10px 0 5px 0;
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 1.1em;
+    }
+
+    nav {
+      background-color: #34495e;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2, h3 {
+      color: #2c3e50;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #2c3e50;
+      color: #fff;
+    }
+
+    footer a {
+      color: #1abc9c;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    a {
+      color: #1a73b7;
+    }
+
+    a:hover {
+      color: #1abc9c;
+    }
+
+    /* Teaching page styles */
+    .intro-box {
+      margin-bottom: 25px;
+      padding: 15px 20px;
+      background-color: #f4f8fb;
+      border-left: 4px solid #1abc9c;
+    }
+
+    .course-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .course-item {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-left: 4px solid #1abc9c;
+      background-color: #f4f8fb;
+    }
+
+    .course-item h4 {
+      margin: 0 0 8px;
+      color: #2c3e50;
+      font-size: 1.05em;
+    }
+
+    .course-description {
+      color: #555;
+      display: block;
+    }
+
+    .resources-link {
+      color: #1abc9c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .resources-link:hover {
+      text-decoration: underline;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #1abc9c;
+      color: #fff;
+      font-size: 0.78em;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+
+    .section {
+      margin-top: 25px;
+    }
+
+    .section-title {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .container {
+        margin: 15px;
+        padding: 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-     <header>
-        <div class="header-overlay"></div>
-        <div class="header-content">
-            <h1>Hervé Talé Kalachi</h1>
-        </div>
-    </header>
-    <!-- Navigation horizontale -->
-    <nav>
-        <a href="./index.html">Home</a>
-        <a href="./publications.html">Publications</a>
-        <a href="./talks.html">Talks</a>
-        <a href="./teaching.html">Teaching</a>
-        <a href="./students.html">Students</a>
-        <a href="./news.html">News</a>
-    </nav>
-    
-    <div class="container">
-        <h2>Teaching Activities</h2>
-
-        <!-- Section: Courses -->
-        <div class="section">
-            <h3 class="section-title">Courses</h3>
-            <ul class="course-list">
-                <!-- Introduction to Error Correcting Codes -->
-                <li class="course-item">
-                    <h4>Introduction to Error Correcting Codes (INF332)</h4>
-                    <span class="course-description">
-                        Course for third-year students in Mathematics, University of Yaoundé 1.<br>
-                    </span>
-                    <br>
-                    <a href="slides/Introduction_aux_codes_correcteurs_d_erreurs_Licence_3.pdf" class="resources-link">
-                        <i class="fas fa-file-pdf"></i> Course slides in french
-                    </a>
-                </li>
-                <!-- Mathématiques pour l'Informatique -->
-                <li class="course-item">
-                    <h4><a href="mathematiques-pour-linformatique.html">Mathématiques pour l'Informatique</a></h4>
-                    <span class="course-description">
-                        Ce cours est destiné aux étudiants de niveau 3 des filières "Humanités Numériques" de l'ENSPY<br>
-                    </span>
-                    <br>
-                </li>
-                 
-                <!-- Python Programming -->
-                <li class="course-item">
-                    <h4><a href="programmation_python.html">Python Programming</a></h4>
-                    <span class="course-description">
-                        Course for second-year students at the National Advanced School of Engineering, Yaoundé.<br>
-                        Content: Python basics, data structures, algorithms, and practical projects.
-                    </span>
-                    <br>
-                </li>
-
-                <!-- Cryptography and Data Security -->
-                <li class="course-item">
-                    <h4>Cryptography and Data Security</h4>
-                    <span class="course-description">
-                        Course for fourth-year (Engineering Cycle) students at the National Advanced School of Engineering, Yaoundé.<br>
-                        Content: Cryptographic protocols, symmetric/asymmetric encryption, PKI.
-                    </span>
-                </li>
-
-                <!-- Code-Based Cryptography -->
-                <li class="course-item">
-                    <h4>Code-Based Cryptography</h4>
-                    <span class="course-description">
-                        Course for Master's students in Computer Engineering.<br>
-                        Content: Error-correcting codes, McEliece/Niederreiter schemes, structural attacks.
-                    </span>
-                </li>
-                <!-- Elements d'algèbre 
-                <li class="course-item">
-                    <h4><a href="elements-algebre.html">Elements d'algèbre</a></h4>
-                    <span class="course-description">
-                        Ce cours est destiné aux étudiants de niveau 3 de la filière "Ingénieurie Financière et Actuariat (IFA3)" de l'ENSPY<br>
-                    </span>
-                    <br>
-                </li>
-                -->
-                <!-- Outils Mathématiques pour l'Informatique II -->
-                <li class="course-item">
-                    <h4><a href="outils-mathematiques-pour-linformatique.html">Outils Mathématiques pour l'Informatique II</a></h4>
-                    <span class="course-description">
-                        Ce cours est desnité aux étudiants de niveau III des filières "Art & Intelligence Artificielle (AIA)" et "GAme Programming (GAP)" de l'ENSPY<br>
-                    </span>
-                    <br>
-                </li>
-            </ul>
-        </div>
-
-
-        <!-- Section: Recent Workshops & Schools -->
-        <div class="section">
-            <h3 class="section-title">Recent Workshops & Schools</h3>
-            <ul class="course-list">
-                <li class="course-item">
-                    <h4>CIMPA School on "Algebra, Algebraic Geometry, and Applications to Information Theory"</h4>
-                    <span class="course-description">
-                        July 2024 – Lecture on "Code-Based Cryptography" in Douala (Cameroon).
-                    </span>
-                </li>
-            </ul>
-        </div>
+  <header>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <h1>Hervé Talé Kalachi</h1>
+      <p>Teaching Activities</p>
     </div>
-    <footer>
-        <p>&copy; 2024 Hervé Talé Kalachi | 
-            <a href="https://scholar.google.fr/citations?user=2J45ZG0AAAAJ&hl=fr">Google Scholar</a> | 
-            <a href="https://orcid.org/0000-0002-2590-4159">ORCID</a> | 
-            <a href="https://www.linkedin.com/in/herve-tale-kalachi/">LinkedIn</a>
-        </p>
-    </footer>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./publications.html">Publications</a>
+    <a href="./talks.html">Talks</a>
+    <a href="./teaching.html">Teaching</a>
+    <a href="./students.html">Students</a>
+    <a href="./news.html">News</a>
+  </nav>
+
+  <div class="container">
+    <h2>Teaching Activities</h2>
+
+    <div class="intro-box">
+      <p>
+        My teaching activities cover cryptography, data security, cybersecurity, Python programming,
+        error-correcting codes, code-based cryptography and mathematical tools for computer science.
+        I teach mainly at the National Advanced School of Engineering of Yaounde (ENSPY),
+        University of Yaounde I, and also contribute to graduate-level courses in cybersecurity
+        and mathematical cryptology.
+      </p>
+    </div>
+
+    <!-- Section: Courses -->
+    <div class="section">
+      <h3 class="section-title">Courses</h3>
+
+      <ul class="course-list">
+
+        <!-- Cryptography and Data Security -->
+        <li class="course-item">
+          <span class="tag">Engineering cycle</span>
+          <h4>Cryptography and Data Security</h4>
+          <span class="course-description">
+            Course for fourth-year engineering students at the National Advanced School of Engineering of Yaounde (ENSPY),
+            University of Yaounde I.<br>
+            Topics include classical and modern cryptography, symmetric and asymmetric encryption,
+            hash functions, digital signatures, public-key infrastructures, authentication protocols
+            and security of data exchanges.
+          </span>
+        </li>
+
+        <!-- Python Programming -->
+        <li class="course-item">
+          <span class="tag">Undergraduate</span>
+          <h4><a href="programmation_python.html">Python Programming</a></h4>
+          <span class="course-description">
+            Course for second-year students at the National Advanced School of Engineering of Yaounde (ENSPY).<br>
+            Topics include Python basics, data structures, algorithms, file handling, modular programming
+            and practical projects.
+          </span>
+        </li>
+
+        <!-- Introduction to Error Correcting Codes -->
+        <li class="course-item">
+          <span class="tag">Undergraduate</span>
+          <h4>Introduction to Error-Correcting Codes (INF332)</h4>
+          <span class="course-description">
+            Course for third-year students in Mathematics, University of Yaounde I.<br>
+            Topics include linear codes, Hamming distance, generator and parity-check matrices,
+            syndrome decoding, cyclic codes and basic examples of error correction.
+          </span>
+          <br>
+          <a href="slides/Introduction_aux_codes_correcteurs_d_erreurs_Licence_3.pdf" class="resources-link" target="_blank">
+            <i class="fas fa-file-pdf"></i> Course slides in French
+          </a>
+        </li>
+
+        <!-- Code-Based Cryptography -->
+        <li class="course-item">
+          <span class="tag">Graduate</span>
+          <h4>Code-Based Cryptography</h4>
+          <span class="course-description">
+            Graduate course for Master's students in computer science, cybersecurity and mathematical cryptology.<br>
+            Topics include error-correcting codes, McEliece and Niederreiter cryptosystems,
+            rank-metric cryptography, Gabidulin and LRPC codes, structural attacks and post-quantum security.
+          </span>
+        </li>
+
+        <!-- Mathématiques pour l'Informatique -->
+        <li class="course-item">
+          <span class="tag">Undergraduate</span>
+          <h4><a href="mathematiques-pour-linformatique.html">Mathématiques pour l'Informatique</a></h4>
+          <span class="course-description">
+            Cours destiné aux étudiants de niveau 3 des filières Humanités Numériques de l'ENSPY.<br>
+            Le cours couvre des outils mathématiques utiles à l'informatique, notamment les structures discrètes,
+            les raisonnements formels et les bases algébriques nécessaires à certains domaines de l'informatique.
+          </span>
+        </li>
+
+        <!-- Outils Mathématiques pour l'Informatique II -->
+        <li class="course-item">
+          <span class="tag">Undergraduate</span>
+          <h4><a href="outils-mathematiques-pour-linformatique.html">Outils Mathématiques pour l'Informatique II</a></h4>
+          <span class="course-description">
+            Cours destiné aux étudiants de niveau III des filières Art &amp; Intelligence Artificielle (AIA)
+            et Game Programming (GAP) de l'ENSPY.<br>
+            Le cours présente des outils mathématiques nécessaires à la modélisation, au raisonnement algorithmique
+            et aux applications informatiques.
+          </span>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- Section: Recent Workshops & Schools -->
+    <div class="section">
+      <h3 class="section-title">Recent Workshops &amp; Schools</h3>
+
+      <ul class="course-list">
+
+        <li class="course-item">
+          <span class="tag">Research school</span>
+          <h4>CIMPA School on Algebra, Algebraic Geometry, and Applications to Information Theory</h4>
+          <span class="course-description">
+            July 2024 – Lecture on <em>Code-Based Cryptography</em>, University of Douala, Cameroon.
+          </span>
+        </li>
+
+        <li class="course-item">
+          <span class="tag">Graduate teaching</span>
+          <h4>Center for Cybersecurity and Mathematical Cryptology, University of Bamenda</h4>
+          <span class="course-description">
+            Graduate-level teaching activities in code-based cryptography, cybersecurity and mathematical cryptology.
+          </span>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- Section: Supervision -->
+    <div class="section">
+      <h3 class="section-title">Student Supervision</h3>
+
+      <ul class="course-list">
+        <li class="course-item">
+          <h4>Engineering and Master's dissertations</h4>
+          <span class="course-description">
+            Supervision of engineering and Master's dissertations in computer engineering, cybersecurity,
+            cryptography, data security, intrusion detection, reverse engineering, steganography and applied information security.
+          </span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Hervé Talé Kalachi |
+      <a href="https://scholar.google.fr/citations?user=2J45ZG0AAAAJ&hl=fr">Google Scholar</a> |
+      <a href="https://orcid.org/0000-0002-2590-4159">ORCID</a> |
+      <a href="https://www.linkedin.com/in/herve-tale-kalachi/">LinkedIn</a>
+    </p>
+  </footer>
 </body>
 </html>
