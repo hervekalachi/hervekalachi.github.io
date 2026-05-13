@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hervé Talé Kalachi - Homepage</title>
-    <meta name="description" content="Hervé Talé Kalachi's homepage - Senior Lecturer in Computer Engineering, specializing in post-quantum cryptography, cryptanalysis, and coding theory.">
-    <meta name="keywords" content="Hervé Talé Kalachi, post-quantum cryptography, cryptanalysis, cyber security, lattices, coding theory, LWE, McEliece, Niederreiter, code-based cryptography, lattice-based cryptography">
+
+    <meta name="description" content="Hervé Talé Kalachi's homepage - Senior Lecturer in Computer Engineering and Information Security, working on post-quantum cryptography, code-based cryptography, cryptanalysis, cloud steganography, web security and privacy risk modeling.">
+
+    <meta name="keywords" content="Hervé Talé Kalachi, cybersecurity, information security, post-quantum cryptography, code-based cryptography, rank metric codes, cryptanalysis, cloud steganography, web security, privacy, GDPR, risk modeling">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
-        /* Styles de base */
+        /* Base styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -19,7 +23,7 @@
             background-color: #f9f9f9;
         }
 
-        /* Header avec image de fond */
+        /* Header with background image */
         header {
             background-image: url('images/crypto-background.png');
             background-size: cover;
@@ -50,9 +54,19 @@
             border-radius: 50%;
             border: 3px solid #fff;
             margin-bottom: 15px;
+            object-fit: cover;
         }
 
-        /* Navigation horizontale */
+        header h1 {
+            margin: 10px 0 5px 0;
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+
+        /* Horizontal navigation */
         nav {
             background-color: #34495e;
             padding: 15px 0;
@@ -71,22 +85,43 @@
             color: #1abc9c;
         }
 
-        /* Contenu principal */
+        /* Main content */
         .container {
             max-width: 1200px;
             margin: 30px auto;
-            padding: 20px;
+            padding: 25px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }        h2, h3 {
+            color: #2c3e50;
+        }
+
+        a {
+            color: #1a73b7;
+        }
+
+        a:hover {
+            color: #1abc9c;
         }
 
         .contact-info {
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
         .contact-info i {
             margin-right: 10px;
             color: #1abc9c;
+        }
+
+        .research-interests {
+            margin-top: 20px;
+            padding: 15px 20px;
+            background-color: #f4f8fb;
+            border-left: 4px solid #1abc9c;
+        }
+
+        .research-interests ul {
+            margin-top: 8px;
         }
 
         /* Footer */
@@ -102,31 +137,42 @@
             text-decoration: none;
         }
 
-        /* Responsive Design */
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
         @media (max-width: 768px) {
             nav a {
                 display: block;
                 margin: 10px 0;
             }
+
             .profile-img-header {
-                width: 100px;
-                height: 100px;
+                width: 110px;
+                height: 110px;
+            }
+
+            .container {
+                margin: 15px;
+                padding: 18px;
             }
         }
     </style>
 </head>
+
 <body>
-    <!-- Header avec photo de profil -->
+    <!-- Header with profile picture -->
     <header>
         <div class="header-overlay"></div>
         <div class="header-content">
             <img src="herve_tale_kalachi.jpg" alt="Hervé Talé Kalachi" class="profile-img-header">
             <h1>Hervé Talé Kalachi</h1>
-            <p>Lecturer in Computer Science</p>
+            <p>Senior Lecturer in Computer Engineering &amp; Information Security</p>
         </div>
     </header>
 
-    <!-- Navigation horizontale -->
+    <!-- Horizontal navigation -->
     <nav>
         <a href="./index.html">Home</a>
         <a href="./publications.html">Publications</a>
@@ -136,28 +182,62 @@
         <a href="./news.html">News</a>
     </nav>
 
-
-    <!-- Contenu principal -->
+    <!-- Main content -->
     <div class="container">
         <h2>About Me</h2>
+
         <p>
-            I am currently a lecturer (chargé de cours) in the Department of Computer Engineering at the <a href="https://polytechnique.cm/">National Advanced School of Engineering</a>, University of Yaounde 1. 
-          </p> 
-          
-          <p>            
-            Prior to joining the University of Yaounde 1, I was a postdoctoral researcher at <a href= "https://www.inria.fr/fr" >Inria</a> 
-in the <a href= "http://www.ens-lyon.fr/LIP/AriC/crypto" >ARIC</a> team at ENS de Lyon, under the supervision of <a href="http://perso.ens-lyon.fr/damien.stehle/">Prof. Damien Stehlé</a>. I did my PhD in the teams <a href="https://www.litislab.fr/equipe/index/ca"> C & A </a> (<a href="http://www.univ-rouen.fr/">Université de Rouen-Normandie</a>) under the supervision of Prof. Ayoub Otmani and Prof. Selestin Ndjeya. 
-          </p> 
-          
-          <p> 
-            My research focuses on post-quantum cryptography, cryptanalysis, and coding theory.
+            I am currently a Senior Lecturer in the Department of Computer Engineering at the
+            <a href="https://polytechnique.cm/">National Advanced School of Engineering of Yaounde</a>,
+            University of Yaounde I, Cameroon.
         </p>
+
+        <p>
+            Prior to joining the University of Yaounde I, I was a postdoctoral researcher at
+            <a href="https://www.inria.fr/fr">Inria</a>, in the
+            <a href="http://www.ens-lyon.fr/LIP/AriC/crypto">ARIC</a> team at ENS de Lyon,
+            where I worked with <a href="http://perso.ens-lyon.fr/damien.stehle/">Prof. Damien Stehlé</a>
+            on post-quantum cryptography. I received my PhD in Computer Science from
+            <a href="http://www.univ-rouen.fr/">Université de Rouen-Normandie</a>, within the
+            <a href="https://www.litislab.fr/equipe/index/ca">C&amp;A</a> team of LITIS and the ERAL team
+            of the University of Yaounde I, under the supervision of Prof. Ayoub Otmani and
+            Prof. Sélestin Ndjeya.
+        </p>
+
+        <p>
+            My research interests include post-quantum cryptography, code-based cryptography,
+            rank-metric codes, cryptanalysis, and the formal analysis of security assumptions.
+            I am also developing research activities in applied information security, including
+            cloud steganography, privacy risk modeling, web security, and the protection of
+            personal data in modern digital systems.
+        </p>
+
+        <p>
+            I am involved in teaching and supervision in cryptography, data security,
+            cybersecurity and programming. I also collaborate with several research groups on
+            topics at the interface of theoretical security, applied cybersecurity, and
+            information protection.
+        </p>
+
+        <div class="research-interests">
+            <h3>Research Interests</h3>
+            <ul>
+                <li>Post-quantum cryptography and code-based cryptography</li>
+                <li>Rank-metric codes, Gabidulin codes, LRPC codes and cryptanalysis</li>
+                <li>Formal security assumptions and attack models</li>
+                <li>Cloud steganography and information protection</li>
+                <li>Web security, privacy risk modeling and personal data protection</li>
+            </ul>
+        </div>
+
         <div class="contact-info">
             <h3>Contact</h3>
             <p><i class="fas fa-phone"></i> +237 6 95 38 17 50</p>
             <p><i class="fas fa-envelope"></i> herve [dot] tale [at] univ [dash] yaounde1 [dot] cm</p>
+
             <h3>Office</h3>
             <p><i class="fas fa-building"></i> 1st floor, Department of Computer Engineering</p>
+
             <h3>Mailing Address</h3>
             <p><i class="fas fa-map-marker-alt"></i> BP 3614 Yaounde-Messa, Yaounde, Cameroon</p>
         </div>
@@ -165,9 +245,9 @@ in the <a href= "http://www.ens-lyon.fr/LIP/AriC/crypto" >ARIC</a> team at ENS d
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Hervé Talé Kalachi | 
-            <a href="https://scholar.google.fr/citations?user=2J45ZG0AAAAJ&hl=fr">Google Scholar</a> | 
-            <a href="https://orcid.org/0000-0002-2590-4159">ORCID</a> | 
+        <p>&copy; 2026 Hervé Talé Kalachi |
+            <a href="https://scholar.google.fr/citations?user=2J45ZG0AAAAJ&hl=fr">Google Scholar</a> |
+            <a href="https://orcid.org/0000-0002-2590-4159">ORCID</a> |
             <a href="https://www.linkedin.com/in/herve-tale-kalachi/">LinkedIn</a>
         </p>
     </footer>
